@@ -1,0 +1,12 @@
+foo:
+  image: hello-world
+  environment:
+    - scale=1
+
+www:
+  image: ubuntu:14.04
+  command: nc -vvlp 80
+  ports:
+    - 80:80
+  environment:
+    - scale=N
